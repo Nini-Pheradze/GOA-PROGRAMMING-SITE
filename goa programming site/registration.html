@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ka">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="website icon" type="png" href="images/image0.jpg">
+        <title>GOA - Goal-Oriented-Academy - Main - Page</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="registration.css">
+    </head>
+
+    <body>
+        <div class="animated-bg"></div>
+
+        <nav>
+            <div class="logo">GOA</div>
+            <ul class="nav-links">
+                <li><a href="main.html">მთავარი</a></li>
+                <li><a href="about.html">ჩვენი კურსები</a></li>
+                <li><a href="registration.html">რეგისტრაცია</a></li>
+            </ul>
+        </nav>
+
+        <div class="registration-image">
+            <img src="images/image1.jpg" alt="GOA Image"> 
+        </div>
+
+        <section id="contact">
+            <div class="contact-form">
+                <h2 class="section-title">რეგისტრაცია</h2>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">სახელი და გვარი</label>
+                        <input type="text" id="name" required placeholder="შეიყვანეთ თქვენი სახელი">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">ელ. ფოსტა</label>
+                        <input type="email" id="email" required placeholder="example@mail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">ტელეფონი</label>
+                        <input type="tel" id="phone" required placeholder="+995 XXX XX XX XX">
+                    </div>
+                    <div class="form-group">
+                        <label for="course">სასურველი კურსი</label>
+                        <input type="text" id="course" placeholder="აირჩიეთ კურსი">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">შეტყობინება</label>
+                        <textarea id="message" placeholder="დაწერეთ თქვენი შეკითხვა..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">გაგზავნა</button>
+                </form>
+            </div>
+        </section>
+
+        <footer>
+        <div class="footer-content">
+            <div class="logo" style="font-size: 2.5rem; margin-bottom: 1rem;">GOA</div>
+            <p style="color: #9ca3af; margin-bottom: 1rem;">Goal-Oriented Academy - შენი გზა პროგრამირებაში</p>
+            
+            <div class="social-links">
+                <a href="#" title="Facebook">📘</a>
+                <a href="#" title="Instagram">📷</a>
+                <a href="#" title="LinkedIn">💼</a>
+                <a href="#" title="YouTube">📺</a>
+            </div>
+            
+            <div class="footer-text">
+                <p>📍 თბილისი, საქართველო</p>
+                <p>📞 +995 599 11 11 11</p>
+                <p>📧 info@goa.ge</p>
+                <p style="margin-top: 2rem;">© 2025 GOA Academy. ყველა უფლება დაცულია.</p>
+            </div>
+        </div>
+    </footer>
+
+        <script src="registration.js"></script>
+    </body>
+</html>

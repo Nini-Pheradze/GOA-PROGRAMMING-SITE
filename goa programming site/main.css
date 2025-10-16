@@ -62,15 +62,15 @@ body {
 /* ნავიგაცია */
 nav {
     position: fixed; /* ნავიგაცია ფიქსირდება ეკრანის ზედა ნაწილში */
-    top: 0; /* ზემოდან 0px დაშორება — ანუ ზუსტად ზედა კიდეზეა */
+    top: 0;
     width: 100%;
     background: rgba(10, 10, 10, 0.9);
-    backdrop-filter: blur(10px); /* ბლარული ეფექტი ფონის უკან */
-    padding: 1rem 5%; /* შიდა დაშორება ზემოთ/ქვემოთ 1rem და გვერდებზე 5% */
-    display: flex; /* Flexbox განლაგება, ელემენტები ერთ ხაზზე */
-    justify-content: space-between; /* მარცხნივ ლოგო, მარჯვნივ ბმულები */ 
+    backdrop-filter: blur(10px);
+    padding: 1rem 5%; 
+    display: flex;
+    justify-content: space-between; 
     align-items: center;
-    z-index: 1000;  /* ნავიგაცია ზედა ფენაზეა — სხვა ელემენტებზე ზემოთ */
+    z-index: 1000; 
     border-bottom: 1px solid rgba(34, 197, 94, 0.2);
 }
 
@@ -87,7 +87,7 @@ nav {
 
 /* ლოგო hover-ზე  */
 .logo:hover {
-    transform: scale(1.05); /* ოდნავ იზრდება ზომაში */
+    transform: scale(1.05); 
     text-shadow: 0 0 30px rgba(34, 197, 94, 0.8); 
 }
 
@@ -105,7 +105,7 @@ nav {
     font-size: 1.1rem;
     transition: all 0.3s;
     position: relative;
-    padding: 0.5rem 0; /* ზემოთ და ქვემოთ შიდა დაშორება */
+    padding: 0.5rem 0; 
 }
 
 .nav-links a::after {
@@ -155,7 +155,7 @@ nav {
     margin-bottom: 1rem;
     background: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
     background-clip: text;
-    -webkit-text-fill-color: transparent; /* ტექსტი გამჭვირვალე გახდეს */
+    -webkit-text-fill-color: transparent;
     animation: slideDown 1s ease-out; /* სლაიდინგ ანიმაცია გამოჩენისას */
 }
 
@@ -267,7 +267,7 @@ section {
     position: absolute; /* სათაურთან მიმართებით პოზიციის დაკავება*/
     bottom: -10px;
     left: 50%;
-    transform: translateX(-50%); /* ზუსტად შუაში გადმოტანა */ 
+    transform: translateX(-50%);
     width: 100px;
     height: 3px;
     background: #22c55e; 
@@ -276,43 +276,38 @@ section {
 /* კურსები */
 .courses-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* ქმნის იმდენ სვეტს რამდენიც ჩაეტევა, თითოეული მინ. 350px და მაქს. 1fr */
-    gap: 2rem;  /* ჰორიზონტალურ და ვერტიკალური დაშორებისთვის grid ელემენტებს შორის */
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* სვეტების რაოდენობა ავტომატურად იცვლება — მინ. სიგანე 350px, მაქს. 1fr */
+    gap: 2rem;
     margin-top: 3rem;
 }
 
 .course-card {
     background: linear-gradient(135deg, #1a1a1a 0%, #0f0f0f 100%);
-    border: 1px solid rgba(34, 197, 94, 0.2);
-    border-radius: 20px;
-    padding: 2rem;
-    transition: all 0.3s; /* ყველა ანიმაციური ეფექტის გლუვი გადასვლა 0.3 წამში */
-    cursor: pointer; /* მაუსის გადატანისას კურსორი იცვლება ხელის სიმბოლოდ */
-    position: relative; /* საჭიროა(::before) ფენის პოზიციონირებისთვის */
-    overflow: hidden; /* ბარათიდან გადმოსული ელემენტები იმალება */
+    border: 1px solid rgba(34, 197, 94, 0.2); 
+    border-radius: 20px; 
+    padding: 2rem; 
+    transition: all 0.3s; /* ყველა ცვლილება გლუვად მოხდეს 0.3 წამში */
+    cursor: pointer;
+    position: relative; 
+    overflow: hidden; /* ზედმეტი შიგთავსის დამალვა */
 }
 
 .course-card::before {
-    content: ''; /* ქმნის ცარიელ სივრცეს ფსევდოელემენტისთვის */
-    position: absolute; /* ბარათის ზედა ფენაზე პოზიციონირება */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, transparent 100%); /* მსუბუქი მწვანე გრადიენტი */
+    content: ''; /* ქმნის ცარიელ ფსევდოელემენტს */
+    position: absolute; /* აბსოლუტური პოზიციონირება ბარათის შიგნით */
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, transparent 100%); 
     opacity: 0; /* თავიდან უხილავია */
-    transition: opacity 0.3s;
-}
+    transition: opacity 0.3s; /* გამჭვირვალობის ცვლილება ხდება გლუვად 0.3 წამში */
+}     
 
-.course-card:hover::before {
-    opacity: 1; /* აჩენს გრადიენტს */
-
-}
-
+/* კურსის ბოქსი ჰოვერზე */
 .course-card:hover {
-    transform: translateY(-10px); /* აჩენს გრადიენტს */
-
-    border-color: #22c55e; /* საზღვარი ხდება მკვეთრი მწვანე */
+    transform: translateY(-10px); 
+    border-color: #22c55e;
     box-shadow: 0 10px 40px rgba(34, 197, 94, 0.3);
 }
 
@@ -324,24 +319,23 @@ section {
 
 /* კურსის სათაურის სტილი */
 .course-card h3 {
-    font-size: 1.8rem;
+    font-size: 1.8rem; 
     margin-bottom: 1rem;
-    color: #22c55e;
+    color: #22c55e; 
 }
-
 
 /* კურსის ტექსტისთვის */
 .course-card p {
-    color: #9ca3af;
-    line-height: 1.6; /* ხაზებს შორის დაშორება */
-    margin-bottom: 1rem;
+    color: #9ca3af; 
+    line-height: 1.6; /* ხაზებს შორის დაშორება ტექსტში */
+    margin-bottom: 1rem; 
 }
 
 /* კურსის ხანგრძლივობის ტექსტი */
 .course-duration {
-    color: #6b7280;
-    font-size: 0.9rem;
-    font-style: italic;
+    color: #6b7280; 
+    font-size: 0.9rem; 
+    font-style: italic; 
 }
 
 /* რატომ GOA */

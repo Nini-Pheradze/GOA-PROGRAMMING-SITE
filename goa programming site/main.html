@@ -14,15 +14,17 @@
 <body>
     <div class="animated-bg"></div>
 
+    <!-- ნავიგაცია გვერდებს შორის -->
     <nav>
         <div class="logo">GOA</div>
         <ul class="nav-links">
             <li><a href="main.html">მთავარი</a></li>
-            <li><a href="about.html">ჩვენი კურსები</a></li>
+            <li><a href="course.html">ჩვენი კურსები</a></li>
             <li><a href="registration.html">რეგისტრაცია</a></li>
         </ul>
     </nav>
 
+    <!-- მთავარი გვერდის სათაური და ღილაკები -->
     <section id="home" class="hero">
         <div class="hero-content">
             <h1 class="heading">Goal-Oriented Academy</h1>
@@ -37,9 +39,11 @@
         </div>
     </section>
 
+    <!-- მოკლე აღწერა კურსებზე -->
     <section id="courses">
         <h2 class="section-title">ჩვენი კურსები</h2>
         <div class="courses-grid">
+            <!-- GOA - ს ძირითადი კურსი - PYTHON & WEB DEVELOPMENT -->
             <div class="course-card">
                 <div class="course-icon">💻</div>
                 <h3>GOA - ს ძირითადი კურსი - PYTHON & WEB DEVELOPMENT</h3>
@@ -47,6 +51,7 @@
                 <p class="course-duration">⏱ ხანგრძლივობა: Speed - ის მიხედვით</p>
             </div>
             
+            <!-- ალგორითმები, C++ და ხელოვნური ინტელექტი -->
             <div class="course-card">
                 <div class="course-icon">📈</div>
                 <h3>ალგორითმები, C++ და ხელოვნური ინტელექტი  - ზურაბ კუჭავა</h3>
@@ -54,6 +59,7 @@
                 <p class="course-duration">⏱ ხანგრძლივობა: 2 წელი</p>
             </div>
             
+            <!-- GOA-ს თამაშების შექმნის კურსი ( game development )  -->
             <div class="course-card">
                 <div class="course-icon">🕹️</div>
                 <h3>GOA-ს თამაშების შექმნის კურსი ( game development ) - ლუკა გურგენიძე</h3>
@@ -67,6 +73,7 @@
                 <p class="course-duration">⏱ ხანგრძლივობა: 2 წელი</p>
             </div>
             
+            <!-- GOA-ს გრაფიკული დიზაინის კურსი  -->
             <div class="course-card">
                 <div class="course-icon">🖼️</div>
                 <h3>GOA-ს გრაფიკული დიზაინის კურსი </h3>
@@ -74,6 +81,7 @@
                 <p class="course-duration">⏱ ხანგრძლივობა: 6 თვე</p>
             </div>
             
+            <!-- GOA-ს რობოტიკისა და ელექტრული ინჟინერიის კურსი, arduino -->
             <div class="course-card">
                 <div class="course-icon">🤖</div>
                 <h3>GOA-ს რობოტიკისა და ელექტრული ინჟინერიის კურსი, arduino - გაბრიელ მოლოდინი</h3>
@@ -89,6 +97,7 @@
         </div>
     </section>
 
+    <!-- რატომ GOA? სექცია -->
     <section id="about">
         <h2 class="section-title">რატომ GOA?</h2>
         <div class="features-grid">
@@ -129,7 +138,7 @@
             </div>
         </div>
 
-
+<!-- ფორმა უბრალოდ კონსულტაციისთვის -->
     <section id="contact">
         <h2 class="section-title">კონსულტაცია</h2>
         <div class="contact-form">
@@ -164,61 +173,21 @@
             <p style="color: #9ca3af; margin-bottom: 1rem;">Goal-Oriented Academy - შენი გზა პროგრამირებაში</p>
             
             <div class="social-links">
-                <a href="#" title="Facebook">📘</a>
-                <a href="#" title="Instagram">📷</a>
-                <a href="#" title="LinkedIn">💼</a>
-                <a href="#" title="YouTube">📺</a>
+                <a href="https://www.facebook.com/nika11keshelava" title="Facebook">📘</a>
+                <a href="https://www.instagram.com/goal_oriented_academy__goa/?igsh=MThiMDFndjR4MGZlYw%3D%3D#" title="Instagram">📷</a>
+                <a href="https://www.youtube.com/@Goal_Oriented_Academy__GOA" title="YouTube">📺</a>
             </div>
             
             <div class="footer-text">
                 <p>📍 თბილისი, საქართველო</p>
-                <p>📞 +995 XXX XX XX XX</p>
+                <p>📞 +995 599 11 11 11</p>
                 <p>📧 info@goa.ge</p>
                 <p style="margin-top: 2rem;">© 2025 GOA Academy. ყველა უფლება დაცულია.</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        // ფორმის გაგზავნა
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                course: document.getElementById('course').value,
-                message: document.getElementById('message').value
-            };
-            
-            alert('მადლობა თქვენი ინტერესისთვის! ჩვენ დაგიკავშირდებით უახლოეს მომავალში.\n\nთქვენი მონაცემები:\nსახელი: ' + formData.name + '\nელ.ფოსტა: ' + formData.email);
-            
-            this.reset();
-        });
-
-        // კურსის ბარათების ანიმაცია სქროლის დროს
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.course-card, .feature, .stat').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s ease-out';
-            observer.observe(el);
-        });
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
 </html>

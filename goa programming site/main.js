@@ -1,3 +1,4 @@
+// კონსულტაციისთვის
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     // მომხმარებლის მიერ შეყვანილი მონაცემების წაკითხვა
     const formData = {
@@ -8,7 +9,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         message: document.getElementById('message').value
     };
 
-    alert('გილოცავთ, თქვენ უკვე გოაელი ხართ! თქვენი წარმატება გარანტირებულია! \n\nთქვენი მონაცემები:\nსახელი: ' + formData.name + '\nელ.ფოსტა: ' + formData.email);
+    alert('მადლობა თქვენი ინტერესისთვის! ჩვენ დაგიკავშირდებით უახლოეს მომავალში.\n\nთქვენი მონაცემები:\nსახელი: ' + formData.name + '\nელ.ფოსტა: ' + formData.email);
     // ფორმის გასასუფთავებლად
     this.reset();
 });
